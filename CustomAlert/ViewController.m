@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CustomAlert.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    CustomAlert *alert = [[CustomAlert alloc] initWithTitle:@"Invalid Id" message:@"Please enter correct Id" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
